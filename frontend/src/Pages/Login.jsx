@@ -55,7 +55,7 @@ const Login = () => {
           <span className="mb-5 ">
             <TextField
               className="w-72 mb-5"
-              id="standard-basic"
+              id="standard-basic1"
               label="Email"
               variant="standard"
               value={email}
@@ -64,7 +64,7 @@ const Login = () => {
           </span>
           <TextField
             className="w-72"
-            id="standard-basic"
+            id="standard-basic2"
             label="Password"
             variant="standard"
             type={"password"}

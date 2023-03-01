@@ -40,11 +40,7 @@ export const States = ({ children }) => {
   const [curSong, setCurSong] = useState({});
   const audioRef = useRef();
   const sliderRef = useRef();
-  const [endMinutes, setEndMinutes] = useState(0);
-  const [endSeconds, setEndSeconds] = useState(0);
 
-  const [curMinutes, setCurMinutes] = useState(0);
-  const [curSeconds, setCurSeconds] = useState(0);
   // SignUp Variables
   const [username, setUsername] = useState("");
   const [signUpEmail, setSignUpEmail] = useState("");
@@ -282,10 +278,19 @@ export const States = ({ children }) => {
 
   //Song UseEffect (Play and Pause)
   const togglePlayPause = () => {
-    if (isPlay) audioRef.current.play();
-    if (!isPlay) audioRef.current.pause();
-    setIsPlay((prev) => !prev);
+    // if (isPlay) audioRef.current.play();
+    // if (!isPlay) audioRef.current.pause();
+    // setIsPlay((prev) => !prev);
+    setIsPlay(!isPlay);
   };
+
+  useEffect(() => {
+    if (!isPlay) {
+      audioRef.current.play();
+    } else {
+      audioRef.current.pause();
+    }
+  }, [isPlay]);
 
   useEffect(() => {
     const getLikedSongs = () => {
@@ -419,14 +424,6 @@ export const States = ({ children }) => {
         isLoop,
         setIsLoop,
         audioRef,
-        endMinutes,
-        setEndMinutes,
-        endSeconds,
-        setEndSeconds,
-        curMinutes,
-        setCurMinutes,
-        curSeconds,
-        setCurSeconds,
         curSong,
         setCurSong,
         togglePlayPause,
