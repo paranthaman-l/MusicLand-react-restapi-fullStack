@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import {getAuth,GoogleAuthProvider} from 'firebase/auth'
-// import {getFirestore} from 'firebase/firestore'
+import { getFirestore } from "firebase/firestore";
 const firebaseConfig = {
   apiKey: "AIzaSyBTIqGMtIPTgJiq8Za5haty28KEK7xTxXQ",
   authDomain: "musicplayer-2004.firebaseapp.com",
@@ -15,5 +15,5 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
-
-export {app,auth,provider}
+const db = getFirestore();
+export {app,auth,provider,db}

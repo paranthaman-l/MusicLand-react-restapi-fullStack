@@ -278,19 +278,18 @@ export const States = ({ children }) => {
 
   //Song UseEffect (Play and Pause)
   const togglePlayPause = () => {
-    // if (isPlay) audioRef.current.play();
-    // if (!isPlay) audioRef.current.pause();
-    // setIsPlay((prev) => !prev);
-    setIsPlay(!isPlay);
+    if (isPlay) audioRef.current.play();
+    if (!isPlay) audioRef.current.pause();
+    setIsPlay((prev) => !prev);
   };
 
-  useEffect(() => {
-    if (!isPlay) {
-      audioRef.current.play();
-    } else {
-      audioRef.current.pause();
-    }
-  }, [isPlay]);
+  // useEffect(() => {
+  //   if (!isPlay) {
+  //     audioRef.current.play();
+  //   } else {
+  //     audioRef.current.pause();
+  //   }
+  // }, [isPlay]);
 
   useEffect(() => {
     const getLikedSongs = () => {

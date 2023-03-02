@@ -59,7 +59,6 @@ function App() {
                   <Route path="/premiumplans" element={<Plans />} />
                   <Route path="/payment" element={<Payment />} />
                 </Routes>
-                <Player />
               </>
             )}
                 <Routes>
@@ -68,6 +67,7 @@ function App() {
                   <Route path="/admin/editsong/:id" element={<EditSong/>}/>
                 </Routes>
                 <Player />
+                {/* <Player /> */}
           </States>
         </AuthProvider>
       </Router>

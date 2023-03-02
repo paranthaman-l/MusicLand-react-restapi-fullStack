@@ -19,7 +19,7 @@ const Controls = () => {
     prevSong,
   } = useStates();
   return (
-    <div className="flex text-mp-white cursor-pointer">
+    <div className="flex text-mp-white cursor-pointer -ml-12">
       <IconButton
         onClick={() => {
           setIsShuffle(!isShuffle);
