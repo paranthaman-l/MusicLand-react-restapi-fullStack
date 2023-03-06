@@ -51,7 +51,7 @@ function App() {
             ) : (
               <>
                 <Routes>
-                  <Route path="/" element={<> <Navbar /> <Landing /> </>}/>
+                  <Route path="/" element={<> <Navbar /> <Landing /> <Home /></>}/>
                   <Route path="/home/:id" element={<> <Navbar /><HarizontalNavbar /><Home /></>} />
                   <Route path="/search" element={<><Navbar /> <HarizontalNavbar /><Search /></>} />
                   <Route path="/profile" element={<><Navbar /><HarizontalNavbar /><Profile /></>} />

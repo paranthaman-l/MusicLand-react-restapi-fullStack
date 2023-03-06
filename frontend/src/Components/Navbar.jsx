@@ -25,9 +25,10 @@ const Navbar = () => {
     <>
       <div className="h-screen bg-mp-violet w-60 fixed max-xl:w-40">
         <div className="font-alata flex items-center font-semibold text-2xl h-14 absolute">
-          <MusicNoteIcon className="text-mp-green ml-2" />
+          {/* <MusicNoteIcon className="text-mp-green ml-2" /> */}
           <span className="text-mp-white">
-            Mu<span className="text-mp-green">sick</span>
+            {/* Mu<span className="text-mp-green">sick</span> */}
+            <img className="w-40" src="https://o.remove.bg/downloads/f957e61c-4898-4c81-ba98-acbc2d5bdd12/Screenshot_2023-03-02_223030-removebg-preview.png" alt="" />
           </span>
         </div>
         {user == null ? (

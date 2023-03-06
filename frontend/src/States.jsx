@@ -122,7 +122,7 @@ export const States = ({ children }) => {
     navigate("/profile");
   };
   const gotoPlans = () => {
-    navigate("/premiumplans");
+    // navigate("/premiumplans");
   };
   const gotoPayment = () => {
     navigate("/payment");

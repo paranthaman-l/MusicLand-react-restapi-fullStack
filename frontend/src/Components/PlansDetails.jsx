@@ -50,7 +50,7 @@ const PlansDetails = () => {
       collection(db, "customers", user.uid, "checkout_sessions"),
       {
         price: priceId,
-        success_url: window.location.origin,
+        success_url: `/home/${user.uid}`,
         cancel_url: window.location.origin,
       }
     );
