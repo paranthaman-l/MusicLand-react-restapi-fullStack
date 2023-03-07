@@ -65,4 +65,8 @@ public class ArtistService implements ArtistServiceInt{
         return artistRepository.findByName(artistName).get();
     }
 
+    public List<Artist> getByArtistRole(String artistRole) {
+        return artistRepository.findAllByRole(artistRole);
+    }
+
 }

@@ -20,10 +20,10 @@ import Profile from "./Pages/Profile";
 import Plans from "./Pages/Plans";
 import LikedSongs from "./Pages/LikedSongs";
 import Payment from "./Pages/Payment";
-import SongServices from "./services/SongServices";
 import ViewAllSong from './admin/ViewAllSong'
 import AddSong from './admin/AddSong'
 import EditSong from './admin/EditSong'
+import HeroSong from "./Components/HeroSong";
 function App() {
   const user = useSelector(getUser);
   const [currentUser, setCurrentUser] = useState(null);
@@ -56,6 +56,7 @@ function App() {
                   <Route path="/search" element={<><Navbar /> <HarizontalNavbar /><Search /></>} />
                   <Route path="/profile" element={<><Navbar /><HarizontalNavbar /><Profile /></>} />
                   <Route path="/likedsongs" element={<><Navbar /><HarizontalNavbar /><LikedSongs /></>} />
+                  <Route path="/hero/:heroname" element={<><Navbar /><HarizontalNavbar /><HeroSong /></>} />
                   <Route path="/premiumplans" element={<Plans />} />
                   <Route path="/payment" element={<Payment />} />
                 </Routes>
@@ -64,7 +65,7 @@ function App() {
                 <Routes>
                   <Route path="/admin/allsongs" element={<ViewAllSong/>}/>
                   <Route path="/admin/addsong" element={<AddSong/>}/>
-                  <Route path="/admin/editsong/:id" element={<EditSong/>}/>
+                  <Route path="/admin/editsong/:name" element={<EditSong/>}/>
                 </Routes>
                 <Player />
                 {/* <Player /> */}

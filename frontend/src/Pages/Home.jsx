@@ -2,12 +2,13 @@ import React from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Banner from "../Components/Banner";
+import Actor from "../Components/HomeContent/Actor";
 import PlaylistContainer from "../Components/PlaylistContainer";
 import RecentSongs from "../Components/RecentSongs";
 
 const Home = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col mb-24">
       <ToastContainer
         position="top-center"
         autoClose={3000}
@@ -26,8 +27,8 @@ const Home = () => {
           <RecentSongs />
           <PlaylistContainer/>
         </div>
-        <div className="h-96 w-full">
-          
+        <div className="text-mp-white font-alata mt-4 ml-3 pb-28">
+            <Actor/>
         </div>
       </div>
     </div>

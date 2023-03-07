@@ -4,7 +4,7 @@ import { useStates } from "../States";
 import Slider from "@material-ui/core/Slider";
 
 const MusicPlayer = () => {
-  const { audioRef, sliderRef, isLoop, curSong, nextSong, setRecentPlaySongs } =
+  const { audioRef, sliderRef, isLoop, curSong, nextSong, setRecentPlaySongs,recentPlaySongs } =
     useStates();
   const [value, setValue] = useState(0);
   useEffect(() => {
@@ -51,7 +51,7 @@ const MusicPlayer = () => {
 
       return `- ${minutes}:${seconds}`;
     }
-    return "00:00";
+    return "--:--";
   };
   return (
     <div className="flex justify-center items-center text-center -ml-9">
@@ -76,7 +76,7 @@ const MusicPlayer = () => {
         onTimeUpdate={onplaying}
         onEnded={() => {
           setRecentPlaySongs((song) => {
-            return [curSong, ...song];
+              return [curSong, ...song];
           });
           nextSong();
         }}

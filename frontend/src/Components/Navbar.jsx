@@ -8,7 +8,7 @@ import { VscLibrary } from "react-icons/vsc";
 import AddBoxIcon from "@mui/icons-material/AddBox";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { Button } from "@mui/material";
-import MusicNoteIcon from "@mui/icons-material/MusicNote";
+import logo from '../Asserts/logo-no-background.png'
 const Navbar = () => {
   const user = useSelector(getUser);
   const { handleLogout } = useStates();
@@ -27,8 +27,8 @@ const Navbar = () => {
         <div className="font-alata flex items-center font-semibold text-2xl h-14 absolute">
           {/* <MusicNoteIcon className="text-mp-green ml-2" /> */}
           <span className="text-mp-white">
+            <img className="w-40 -ml-2 cursor-pointer" src={logo} alt="" />
             {/* Mu<span className="text-mp-green">sick</span> */}
-            <img className="w-40" src="https://o.remove.bg/downloads/f957e61c-4898-4c81-ba98-acbc2d5bdd12/Screenshot_2023-03-02_223030-removebg-preview.png" alt="" />
           </span>
         </div>
         {user == null ? (
@@ -42,7 +42,7 @@ const Navbar = () => {
             </Button>
           </div>
         ) : (
-          <div className="flex flex-col justify-between items-center h-full py-10">
+          <div className="flex flex-col justify-between items-center h-full py-10 mt-5">
             <div className="">
               <ul
                 // role={"list"}
@@ -81,7 +81,7 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-            <div className="flex items-center mb-16 flex-col">
+            <div className="flex items-center mb-24 flex-col">
               <Button
                 className="text-mp-white"
                 variant="contained"

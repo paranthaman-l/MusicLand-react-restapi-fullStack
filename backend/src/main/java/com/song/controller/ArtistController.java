@@ -42,6 +42,10 @@ public class ArtistController {
 public Artist getByArtistName(@PathVariable String artistName) {
 	return artistService.getByArtistName(artistName);
 }
+@GetMapping("/role/{artistRole}")
+public List<Artist> getByArtistRole(@PathVariable String artistRole) {
+	return artistService.getByArtistRole(artistRole);
+}
 
 	@PostMapping("/addartist")
 	public String addArtist(@RequestBody Artist Artist) {

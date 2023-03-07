@@ -68,6 +68,7 @@ export const States = ({ children }) => {
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoZJYp5k4BrOGGYJXcBXtsa20lAMvfs6ifFw&usqp=CAU"
   );
 
+  const [hero, setHero] = useState({});
   const validatePassword = () => {
     setError("");
     let isValid = true;
@@ -129,6 +130,10 @@ export const States = ({ children }) => {
   };
   const gotoLikedSongsPage = () => {
     navigate("/likedsongs");
+  };
+  const gotoHeroPage = (hero) => {
+    navigate(`/hero/${hero.name}`);
+    setHero(hero);
   };
   //Sign in with Google Account
   const [isExist, setIsExist] = useState(false);
@@ -484,6 +489,9 @@ export const States = ({ children }) => {
         setPasswordError,
         confirmPasswordError,
         setConfirmPasswordError,
+        gotoHeroPage,
+        hero,
+        setHero,
       }}
     >
       {children}
