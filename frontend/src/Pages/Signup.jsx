@@ -7,6 +7,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
 import { BiErrorCircle } from "react-icons/bi";
+import logo from '../Asserts/logo.png'
 const Singup = () => {
   const {
     gotoLoginPage,
@@ -45,9 +46,10 @@ const Singup = () => {
       />
       <div className="bg-white w-5/12 h-full flex justify-center items-center rounded-l-lg shadow-5xl ml-10 flex-col relative">
         <div className="font-alata flex items-center font-semibold text-4xl h-14 absolute top-3 left-0 ">
-          <MusicNoteIcon fontSize="10px" className="text-mp-violet ml-2 " />
+          {/* <MusicNoteIcon fontSize="10px" className="text-mp-violet ml-2 " /> */}
           <span className="text-mp-black">
-            Mu<span className="text-mp-violet">sick</span>
+            {/* Mu<span className="text-mp-violet">sick</span> */}
+            <img className="w-40 ml-1 cursor-pointer" src={logo} alt="" />
           </span>
         </div>
         <div className="flex items-start flex-col mr-36 mt-10">
@@ -56,7 +58,10 @@ const Singup = () => {
             Welcome ! Please enter your details.
           </h4>
         </div>
-        <form className="flex flex-col items-start mt-5 mr-12" onSubmit={SignUpWithPass}>
+        <form
+          className="flex flex-col items-start mt-5 mr-12"
+          onSubmit={SignUpWithPass}
+        >
           <span className="mb-5 flex">
             <TextField
               className="w-72 mb-5"
@@ -88,7 +93,7 @@ const Singup = () => {
             />
             {emailError && (
               <>
-               <span className="group cursor-pointer flex absolute right-44  mt-4 justify-center items-center top-[220px]">
+                <span className="group cursor-pointer flex absolute right-44  mt-4 justify-center items-center top-[220px]">
                   <p className="hidden group-hover:block border-spacing-1 text-mp-red text-base mr-36 absolute w-[230px] -left-44 ">
                     {emailError}
                   </p>
