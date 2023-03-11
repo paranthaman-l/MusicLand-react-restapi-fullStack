@@ -1,20 +1,42 @@
-import React,{useState} from "react";
+import React, { useEffect, useState } from "react";
 import { useStates } from "../States";
 
 const SearchSong = () => {
-  const { likedSongs,setCurSong, curSong, setIsPlay } =
-    useStates();
+  const { setCurSong, curSong, setIsPlay, search, songs,setTopResultSong } = useStates();
   const [select, setSelect] = useState(0);
   const clickedSong = (id) => {
     setSelect(id);
   };
-//   const shuffle = arr => [...arr].sort(() => Math.random() - 0.5);
-//   const newLikedSongs = shuffle(likedSongs);
+  const [filterSongs, setFilterSongs] = useState([]);
+  //   const shuffle = arr => [...arr].sort(() => Math.random() - 0.5);
+  //   const newLikedSongs = shuffle(likedSongs);
+  useEffect(() => {
+    const filterArraySongName = (songs) => {
+      return songs.filter(
+        (song) =>
+          song.title.toLowerCase().includes(search.toLowerCase())
+      );
+    };
+    const filterArray = (songs) => {
+      return songs.filter(
+        (song) =>
+          song.title.toLowerCase().includes(search.toLowerCase()) ||
+          song.movie.toLowerCase().includes(search.toLowerCase()) ||
+          song.hero.toLowerCase().includes(search.toLowerCase())  ||
+          song.music.toLowerCase().includes(search.toLowerCase()) ||
+          song.lyricist.toLowerCase().includes(search.toLowerCase())
+      );
+    };
+    const result = filterArraySongName(songs);
+    setTopResultSong(result[Math.floor(Math.random() * result.length)]);
+    setFilterSongs(filterArray(songs));
+  }, [search]);
+
   return (
     <div className="text-mp-white w-full text-xl ml-8">
       <p className="font-bold">Songs</p>
       <div className="h-80  bg-mp-light-black bg-opacity-30 w-5/6 max-xl:w-full mt-4 rounded-md py-2 ">
-        {likedSongs.slice(0, 4).map((song, i) => {
+        {filterSongs.slice(0, 4).map((song, i) => {
           return (
             <div
               key={i}

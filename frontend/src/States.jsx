@@ -54,6 +54,8 @@ export const States = ({ children }) => {
   const { setTimeActive } = useAuthValue();
   const [addFav, setAddFav] = useState(false);
   const [search, setSearch] = useState("");
+  const [topResultSong, setTopResultSong] = useState("");
+
   const [recentPlaySongs, setRecentPlaySongs] = useState([]);
   const [bannerSong, setBannerSong] = useState({});
   const [isPremium, setIsPremium] = useState("false");
@@ -492,6 +494,8 @@ export const States = ({ children }) => {
         gotoHeroPage,
         hero,
         setHero,
+        topResultSong,
+        setTopResultSong,
       }}
     >
       {children}
