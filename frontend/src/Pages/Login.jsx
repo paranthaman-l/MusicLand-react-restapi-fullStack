@@ -7,7 +7,7 @@ import { useStates } from "../States";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import MusicNoteIcon from "@mui/icons-material/MusicNote";
-import logo from "../Asserts/logo-black.png";
+import logo from "../Asserts/logo.png";
 const Login = () => {
   const {
     handleLogin,
