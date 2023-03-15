@@ -141,7 +141,6 @@ export const States = ({ children }) => {
   const [isExist, setIsExist] = useState(false);
   const handleLogin = async () => {
     const response = await signInWithPopup(auth, provider);
-    console.log(response);
     navigate(`/home/${response.user.uid}`);
     try {
       axios.get(`/login/isexistuser/${response.user.uid}`).then((res1) => {

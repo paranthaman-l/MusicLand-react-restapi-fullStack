@@ -33,9 +33,9 @@ const SearchSong = () => {
   }, [search]);
 
   return (
-    <div className="text-mp-white w-full text-xl ml-8">
+    <div className="text-mp-white w-full text-xl ml-10">
       <p className="font-bold">Songs</p>
-      <div className="h-80  bg-mp-light-black bg-opacity-30 w-5/6 max-xl:w-full mt-4 rounded-md py-2 ">
+      <div className="h-80  bg-mp-light-black bg-opacity-30 w-11/126 max-xl:w-full mt-4 rounded-md py-2 ">
         {filterSongs.slice(0, 4).map((song, i) => {
           return (
             <div

@@ -28,7 +28,7 @@ const HarizontalNavbar = () => {
       ) : (
         <button className="flex justify-center items-center px-3 text-mp-black  border-spacing-1 border-mp-white text-base font-semibold rounded-xl bg-mp-gold">
           <SiPrettier />
-          Premium
+          remium
           <img
             className="w-8 ml-2 object-cover"
             src="https://svgsilh.com/svg/304838.svg"

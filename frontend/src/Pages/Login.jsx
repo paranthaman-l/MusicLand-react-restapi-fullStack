@@ -6,7 +6,6 @@ import SignWithGoogleImage from "../Asserts/btn_google_signin_light.png";
 import { useStates } from "../States";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import MusicNoteIcon from "@mui/icons-material/MusicNote";
 import logo from "../Asserts/logo.png";
 const Login = () => {
   const {

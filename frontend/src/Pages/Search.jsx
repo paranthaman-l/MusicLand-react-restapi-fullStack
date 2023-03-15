@@ -29,7 +29,7 @@ const Search = () => {
       <div className="ml-72 w-[80vw] max-xl:ml-40">
         {search ? (
           <>
-            <div className="flex mt-3 ml-3 w-full">
+            <div className="flex mt-3 ml-3 w-11/12">
               <TopResult />
               <SearchSong />
             </div>

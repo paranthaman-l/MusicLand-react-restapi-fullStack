@@ -5,7 +5,6 @@ import Button from "@mui/material/Button";
 import { useStates } from "../States";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import MusicNoteIcon from "@mui/icons-material/MusicNote";
 import { BiErrorCircle } from "react-icons/bi";
 import logo from '../Asserts/logo.png'
 const Singup = () => {
