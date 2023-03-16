@@ -3,6 +3,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Banner from "../Components/Banner";
 import Actor from "../Components/HomeContent/Actor";
+import AlbumSongs from "../Components/HomeContent/Album Songs";
 import PlaylistContainer from "../Components/PlaylistContainer";
 import RecentSongs from "../Components/RecentSongs";
 
@@ -29,6 +30,7 @@ const Home = () => {
         </div>
         <div className="text-mp-white font-alata mt-4 ml-3 pb-28">
             <Actor/>
+            <AlbumSongs/>
         </div>
       </div>
     </div>

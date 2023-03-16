@@ -25,6 +25,7 @@ function VerifyEmail() {
         .then(() => {
           if (currentUser?.emailVerified) {
             clearInterval(interval);
+            
             SignupService.postUserDetails(currentUser.uid, {
                 "uid": currentUser.uid,
                 "displayName": username,
