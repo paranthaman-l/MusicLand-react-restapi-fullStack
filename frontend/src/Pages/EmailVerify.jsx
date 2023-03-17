@@ -7,7 +7,6 @@ import { useStates } from "../States";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser, setUser } from "../Slice/userSlice";
 import { Button } from "@mui/material";
-import axios from "../Api/axios";
 import SignupService from "../services/SignupService";
 
 function VerifyEmail() {
