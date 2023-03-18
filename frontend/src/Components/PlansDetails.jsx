@@ -62,7 +62,7 @@ const PlansDetails = () => {
       }
       if (sessionId) {
         const stripe = await loadStripe(
-          "pk_test_51MXNkiSDtyxcR8ytSxlGr4O2E8mBZlSHmc1cLIwXm62eBsjKykQL4j1aLCfEbMTrkvJJeveD4RzLja7lvJcJVNKQ00vYnQra4l"
+          "your stripe key"
         );
         stripe.redirectToCheckout({ sessionId });
       }
