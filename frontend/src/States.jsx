@@ -212,7 +212,7 @@ export const States = ({ children }) => {
         })
         .catch((err) => {
           // console.log(err.response);
-        });
+        }); 
     };
     getLikedSongs();
   }, []);
@@ -290,7 +290,7 @@ export const States = ({ children }) => {
   };
 
   // useEffect(() => {
-  //   if (!isPlay) {
+  //   if (!isPlay) { 
   //     audioRef.current.play();
   //   } else {
   //     audioRef.current.pause();

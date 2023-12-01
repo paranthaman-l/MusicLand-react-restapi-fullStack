@@ -14,6 +14,7 @@ import { RiFullscreenFill } from "react-icons/ri";
 import ViewSongInAdmin from "../Components/ViewSongInAdmin";
 import ViewHeroSongs from "../Components/ViewHeroSongs";
 import ViewMovieSongs from "../Components/ViewMovieSongs";
+import logo from '../../src/Asserts/logo-no-background.png'
 const ViewAllSong = () => {
   const {
     curSong,
@@ -37,7 +38,7 @@ const ViewAllSong = () => {
     setSelect(id);
   };
   const getAllSongs = () => {
-    fetch("http://localhost:2004/songs/allsongs")
+    fetch("http://ec2-43-205-207-80.ap-south-1.compute.amazonaws.com:8081/songs/allsongs")
       .then((res) => res.json())
       .then((result) => {
         setAllSongs(result);
@@ -94,13 +95,14 @@ const ViewAllSong = () => {
         {isViewHero && <ViewHeroSongs />}
         {isViewMovie && <ViewMovieSongs />}
       </div>
-      <div className="font-alata flex items-center font-semibold text-4xl mt-10 absolute">
-        <MusicNoteIcon
+      <div className="font-alata flex items-center font-semibold text-4xl mt-2 absolute">
+        {/* <MusicNoteIcon
           className="text-mp-green ml-2"
           sx={{ fontSize: "35px" }}
-        />
-        <span className="text-mp-white">
-          Mu<span className="text-mp-violet">sick</span>
+        /> */}
+        <span className="text-mp-white ">
+          {/* Mu<span className="text-mp-violet">sick</span> */}
+          <img src={logo} className="w-44 object-contain" alt="" srcset="" />
         </span>
       </div>
       <h2 className="font-alata text-4xl flex justify-center font-bold mt-6">

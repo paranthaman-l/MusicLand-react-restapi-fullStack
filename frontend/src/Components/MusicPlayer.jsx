@@ -49,7 +49,7 @@ const MusicPlayer = () => {
           ? `0${Math.floor((max - time) % 60)}`
           : Math.floor((max - time) % 60);
 
-      return `- ${minutes}:${seconds}`;
+      return `-${minutes}:${seconds}`;
     }
     return "--:--";
   };
